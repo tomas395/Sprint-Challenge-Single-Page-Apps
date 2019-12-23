@@ -48,6 +48,7 @@ function SearchForm() {
             name={item.name}
             species={item.species}
             status={item.status}
+            image={item.image}
           />
         );
       })}

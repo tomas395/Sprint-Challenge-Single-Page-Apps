@@ -27,22 +27,16 @@ const Buttons = styled.button`
   margin: 5px, 0;
   color: white;
   background-color: green;
-  border: solid 2px black;
+  border: solid 1px black;
+  text-decoration: none;
 `;
 
 export default function WelcomePage() {
   return (
     <div>
-      {/* <Card> */}
       <section className="welcome-page">
         <header>
           <h1>Welcome to the ultimate fan site!</h1>
-          <Link to="/Characters">
-            <Buttons>Characters</Buttons>
-          </Link>
-          <Link to="/Search">
-            <Buttons>Search</Buttons>
-          </Link>
           <img
             className="main-img"
             src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
@@ -50,7 +44,9 @@ export default function WelcomePage() {
           />
         </header>
       </section>
-      {/* </Card> */}
+      <Link to="/Search">
+        <Buttons>Characters</Buttons>
+      </Link>
     </div>
   );
 }

@@ -11,7 +11,7 @@ export default function CharacterList() {
       .get(`https://rickandmortyapi.com/api/character/`)
 
       .then(res => {
-        console.log("Fetched!", res);
+        console.log("Fetched!", res.data);
         setCharacter(res.data.results);
       })
       .catch(err => console.log("Error: The data was not returned!", err));
@@ -31,6 +31,7 @@ export default function CharacterList() {
           gender={item.gender}
           species={item.species}
           status={item.status}
+          image={item.image}
         />
       ))}
     </section>
